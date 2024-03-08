@@ -3,8 +3,19 @@ import streamlit as st
 # App title
 st.set_page_config(page_title="swaadAI")
 
-st.title('swaadAI')
-st.write('This chatbot is created using the open-source Llama 2 LLM model from Meta.')
+
+st.markdown("""
+# Swaad
+### Your AI Kitchen Assistant
+""")
+
+
+with st.sidebar:
+    st.title("Recipe of the day")
+    st.image("https://www.indianhealthyrecipes.com/wp-content/uploads/2021/08/chana-masala-recipe-500x500.jpg")
+
+
+
 
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
